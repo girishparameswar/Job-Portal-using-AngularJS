@@ -1,0 +1,50 @@
+<html ng-cloak>
+    <head>
+        <title>Post a Job</title>
+        <style>
+        [ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-    ng-cloak {
+        display: none !important;
+        }
+        .align{
+            text-align: center;
+        }
+        #in, #in1, #post{
+            width:50%;
+            position:relative;
+            left:25%;
+        }
+        #notify{
+            color:rgb(184, 64, 64);
+            text-align: center;
+        }
+        </style>
+        <script src="https://code.angularjs.org/1.5.5/angular.min.js"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+         integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    </head>
+    <body>
+
+        
+<div class="panel panel-primary">
+    <div class="panel-heading">
+        <a style="color:wheat; text-decoration:none;" href="#/homepage">Homepage | </a>
+        <a style="color:wheat; text-decoration:none;" href="#/logout">Logout</a>
+        <h1 class="align">Job Application Portal</h1>
+    </div>
+    <br>
+    <h1 class="align">Post a Job</h1>
+        <form name="postform">
+        <label id="in">Job Title</label>
+        <input type="text" id="in1" class="form-control" ng-required="true" placeholder="Job Title" ng-model="post.title"><br><br>
+        <label id="in">Job Description</label>
+        <input type="text" id="in1" class="form-control" ng-required="true" placeholder="Job Description" ng-model="post.description"><br><br>
+        <label id="in">Keywords</label>
+        <input type="text" id="in1" class="form-control" ng-required="true" placeholder="keywords" ng-model="post.keywords"><br><br>
+        <label id="in">Location</label>
+        <input type="text" id="in1" class="form-control" ng-required="true" placeholder="Location" ng-model="post.location"><br><br>
+        <button class="btn btn-primary" id="post" ng-disabled="postform.$invalid" ng-click="save_job(post)">Save Jobs</button><br><br>
+        <label id="notify"></label>
+    </form>
+</div>
+    </body>
+</html>

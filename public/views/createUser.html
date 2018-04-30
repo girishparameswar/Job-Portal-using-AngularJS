@@ -1,0 +1,51 @@
+<html ng-cloak>
+    <head>
+        <style>
+        [ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-    ng-cloak {
+        display: none !important;
+        }
+        .align{
+            text-align: center;
+        }
+        #in, #rgsave{
+            position: relative;
+            left:25%;
+            width:50%;
+        }
+        </style>
+        <title>Create user</title>
+        <script src="https://code.angularjs.org/1.5.5/angular.min.js"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+         integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    </head>
+    <body>
+<div class="panel panel-primary">
+    <div class="panel-heading">
+        <a style="color:wheat; text-decoration: none;" href="#/">Login</a>
+        <h1 class="align">Job Application Portal</h1>
+    </div>
+    <div class="panel-body">
+        <h1 class="align">Registration Page</h1>
+        <hr>
+        <form name="newUserform" class="form-group">
+            <label id="in">Username</label>
+             <input type="text" id="in" class="form-control" ng-required="true" ng-model="newUser.username"><br><br>
+            <label id="in">Password</label>
+             <input type="text" id="in" class="form-control" ng-required="true" ng-model="newUser.password"><br><br>
+            <label id="in">Emaild</label>
+            <input type="text" id="in" class="form-control" ng-required="true"  ng-model="newUser.email"><br><br>
+            <label id="in">Location</label>
+            <input type="text" id="in" class="form-control" ng-required="true" ng-model="newUser.location"><br><br>
+            <label id="in">Phone</label>
+            <input type="number" id="in" class="form-control" ng-required="true" ng-model="newUser.phone"><br><br>
+            <label id="in">User type</label>
+            <select id="in" ng-required="true" class="form-control" ng-model="newUser.usertype">
+                        <option value="company">Company</option>
+                        <option value="jseeker">Job Seeker</option>
+                        </select><br><br>
+            <button id="rgsave" class="btn btn-primary" ng-disabled="newUserform.$invalid" ng-click="regUser()">Register</button>
+        </form>
+    </div>
+</div>
+    </body>
+</html>

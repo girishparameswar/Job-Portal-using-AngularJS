@@ -1,0 +1,48 @@
+<html ng-cloak>
+    <head>
+        <style>
+        [ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-    ng-cloak {
+        display: none !important;
+        }
+        .align{
+            text-align: center;
+        }
+        </style>
+        <title>Search a Job</title>
+        <script src="https://code.angularjs.org/1.5.5/angular.min.js"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+         integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    </head>
+    <body ng-app="">
+    <div class="panel panel-primary">
+        <div class="panel-heading">
+                <a style="color:wheat; text-decoration:none;"  href="#/homepage">Homepage | </a>
+                <a style="color:wheat; text-decoration:none;" href="#/logout">Logout</a>        
+            <h1 class="align">Job Application Portal</h1>
+        </div>
+    <div class="panel-body">
+    <h1 class="align">Search a Job</h1>
+    <form name="searchform">
+        <label>Search By Title</label><input type="text" class="form-control" placeholder="Job Title" ng-model="sjobs.title"><br><br>
+        <label>Search by Keywords</label><input type="text" class="form-control" placeholder="keywords" ng-model="sjobs.keywords"><br><br>
+        <label>Search by Location</label><input type="text" class="form-control" placeholder="Location" ng-model="sjobs.location"><br><br>
+        <input type="button" class="btn btn-primary" ng-click="search_job(sjobs)" ng-model="displayContent" value="Search Jobs">
+        <!-- <button id="search" ng-disabled="searchform.$invalid" ng-model="searchme" ng-click="search_job(sjobs)">Search Jobs</button> -->
+        <button id="rst" class="btn btn-primary" ng-click="reset()">Reset</button><br><br>
+        <label id="notify"></label>
+    </form>
+    </div>
+    <div class="panel panel-success">
+        <div class="panel-heading">
+            <h4 ng-show="'display==true'">Results</h4>
+        </div>
+        <div class="panel-body">
+        <div id="dcontent" ng-show="'display==true'">
+        </div>
+    </div>
+    
+        <!-- <h1>Display here</h1> -->
+    </div>
+</div>
+    </body>
+</html>

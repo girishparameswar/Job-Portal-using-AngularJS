@@ -1,0 +1,49 @@
+<html ng-cloak>
+    <head>
+        <title>Login page</title>
+        <style>
+        [ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-    ng-cloak {
+        display: none !important;
+        }
+        .align{
+            text-align:center;
+        }
+        #tx1, #tx2{
+            width:50%;
+        }
+         .panel-body{
+            position:relative;
+            left:25%;
+            top:50%;
+        }
+        #notify{
+            color:rgb(189, 71, 71);
+            font-size: 18px;
+        }
+        </style>
+        <script src="https://code.angularjs.org/1.5.5/angular.min.js"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+         integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    </head>
+    <body>
+       
+    <div class="panel panel-primary">
+        <div class="panel-heading">
+            <h1 class="align">Job Application Portal</h1>
+        </div>
+    <div class="panel-body">
+            <h1 class="align1">Sign in page</h1>
+    <form name="loginform">
+        <div class="form-group">
+        Username: <input type="text" id="tx1" class="form-control" ng-model="user.name" ng-required="true" placeholder="Username"><br><br>
+        </div>
+        <div class="form-group">
+        Password: <input type="password" id="tx2" class="form-control" ng-model="user.password" ng-required="true" placeholder="Pass"><br><br>
+        </div>
+        <button id="b1" class="btn btn-success"  ng-click="login(user)">Login</button>
+        <button class="btn btn-primary" ng-click="register()">Register</button><label id="notify"></label>
+    </form>
+    </div>
+    </div>
+</body>
+</html>
